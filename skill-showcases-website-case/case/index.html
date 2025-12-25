@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showcase 001: 制作一个去 AI 味儿、审美在线的页面 — Skill Showcases</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,500&family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress"></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="article-nav">
+        <a href="/" class="nav-back">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M16 10H4M4 10L10 16M4 10L10 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span>返回首页</span>
+        </a>
+        <div class="nav-issue">VOL.001</div>
+    </nav>
+
+    <!-- Article Hero -->
+    <header class="article-hero">
+        <div class="hero-background">
+            <div class="gradient-mesh"></div>
+            <div class="floating-orb orb-1"></div>
+            <div class="floating-orb orb-2"></div>
+            <div class="floating-orb orb-3"></div>
+        </div>
+
+        <div class="hero-container">
+            <div class="hero-meta">
+                <span class="meta-issue">SHOWCASE 001</span>
+                <span class="meta-divider">·</span>
+                <span class="meta-date">2024 冬季刊</span>
+                <span class="meta-divider">·</span>
+                <span class="meta-category">前端设计</span>
+            </div>
+
+            <h1 class="hero-title">
+                制作一个去 AI 味儿、<br>
+                审美在线的页面
+            </h1>
+
+            <p class="hero-lead">
+                探索 frontend-design skill 如何帮助你创建独具特色的界面，<br>
+                摆脱千篇一律的"AI 垃圾"美学
+            </p>
+
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-icon">📖</div>
+                    <div class="stat-text">
+                        <span class="stat-value">8 分钟</span>
+                        <span class="stat-label">阅读时长</span>
+                    </div>
+                </div>
+                <div class="stat">
+                    <div class="stat-icon">⚡</div>
+                    <div class="stat-text">
+                        <span class="stat-value">3 个</span>
+                        <span class="stat-label">实战案例</span>
+                    </div>
+                </div>
+                <div class="stat">
+                    <div class="stat-icon">🎯</div>
+                    <div class="stat-text">
+                        <span class="stat-value">生产级</span>
+                        <span class="stat-label">代码质量</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Article Content -->
+    <main class="article-content">
+        <div class="content-container">
+            <!-- Introduction Section -->
+            <section class="content-section" id="introduction">
+                <div class="section-marker">
+                    <span class="marker-number">01</span>
+                    <span class="marker-label">介绍</span>
+                </div>
+
+                <div class="section-body">
+                    <p class="lead-paragraph">
+                        今天介绍 <strong>frontend-design</strong> 这个 Skill。众所周知，现在 vibe coding 非常擅长做前端页面，只要一句话，分分钟给你出一版。但美学风格呢？只能说勉强能看吧。
+                    </p>
+
+                    <p>
+                        这也是 Lovable、Figma Make 等应用发挥长处的地方。AI 味，英文叫 <em>"AI slop"</em>。这项技能指导我们创建独具特色、达到生产级别的界面，避免千篇一律的"AI 垃圾"美学。
+                    </p>
+
+                    <div class="highlight-box">
+                        <div class="highlight-icon">💡</div>
+                        <div class="highlight-content">
+                            <h4>核心价值</h4>
+                            <p>让 AI 生成的前端页面具备专业设计师的审美水准，无需复杂的提示词技巧，用户可以毫无心智负担地完成设计任务。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Stack Section -->
+            <section class="content-section" id="stack">
+                <div class="section-marker">
+                    <span class="marker-number">02</span>
+                    <span class="marker-label">能力栈</span>
+                </div>
+
+                <div class="section-body">
+                    <div class="stack-grid">
+                        <!-- Core Stack -->
+                        <div class="stack-card core">
+                            <div class="stack-header">
+                                <h3>核心能力</h3>
+                                <span class="stack-badge">CORE</span>
+                            </div>
+                            <div class="stack-table">
+                                <div class="table-row header">
+                                    <div class="table-cell">Type</div>
+                                    <div class="table-cell">Name</div>
+                                    <div class="table-cell">Source</div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="table-cell">
+                                        <span class="cell-badge skill">Skill</span>
+                                    </div>
+                                    <div class="table-cell">
+                                        <span class="cell-name">frontend-design</span>
+                                    </div>
+                                    <div class="table-cell">
+                                        <a href="https://github.com/anthropics/claude-code/blob/main/plugins/frontend-design/skills/frontend-design/SKILL.md" class="cell-link" target="_blank">
+                                            查看源码
+                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                                <path d="M3 9L9 3M9 3H3M9 3V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Optional Stack -->
+                        <div class="stack-card optional">
+                            <div class="stack-header">
+                                <h3>可选搭配</h3>
+                                <span class="stack-badge">OPTIONAL</span>
+                            </div>
+                            <div class="stack-table">
+                                <div class="table-row header">
+                                    <div class="table-cell">Type</div>
+                                    <div class="table-cell">Name</div>
+                                    <div class="table-cell">Usage</div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="table-cell">
+                                        <span class="cell-badge skill">Skill</span>
+                                    </div>
+                                    <div class="table-cell">
+                                        <span class="cell-name">webapp-testing</span>
+                                    </div>
+                                    <div class="table-cell">
+                                        <span class="cell-usage">确保页面功能可用无异常</span>
+                                    </div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="table-cell">
+                                        <span class="cell-badge hook">Hook</span>
+                                    </div>
+                                    <div class="table-cell">
+                                        <span class="cell-name">learning-output-style</span>
+                                    </div>
+                                    <div class="table-cell">
+                                        <span class="cell-usage">跟随 agent 学习前端构建</span>
+                                    </div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="table-cell">
+                                        <span class="cell-badge agent">Agent</span>
+                                    </div>
+                                    <div class="table-cell">
+                                        <span class="cell-name">code-architect</span>
+                                    </div>
+                                    <div class="table-cell">
+                                        <span class="cell-usage">后续的开发实现</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Evaluation Section -->
+            <section class="content-section" id="evaluation">
+                <div class="section-marker">
+                    <span class="marker-number">03</span>
+                    <span class="marker-label">评测</span>
+                </div>
+
+                <div class="section-body">
+                    <p class="section-intro">
+                        废话不多说，开始评测吧。随手写了个提示词：
+                    </p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-lang">Prompt</span>
+                            <button class="code-copy">复制</button>
+                        </div>
+                        <pre><code>设计一个平安夜祝福的前端页面，要求可以交互（拆礼物），自适应移动端</code></pre>
+                    </div>
+
+                    <h3 class="subsection-title">测试 1：平安夜祝福页面</h3>
+
+                    <div class="comparison-grid">
+                        <div class="comparison-item">
+                            <div class="comparison-header">
+                                <span class="comparison-label bad">Without Skill</span>
+                            </div>
+                            <div class="comparison-image">
+                                <div class="image-placeholder">
+                                    <span class="placeholder-text">Claude Sonnet 4.5 直出效果</span>
+                                </div>
+                            </div>
+                            <div class="comparison-verdict">
+                                <p><strong>⚠️ 常见问题：</strong></p>
+                                <ul>
+                                    <li>非常粗糙，滥用的 emoji</li>
+                                    <li>浓烈的 AI 味儿</li>
+                                    <li>选用了常规的 Arial 字体</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="comparison-item">
+                            <div class="comparison-header">
+                                <span class="comparison-label good">With Skill</span>
+                            </div>
+                            <div class="comparison-image">
+                                <div class="image-placeholder highlight">
+                                    <span class="placeholder-text">使用 frontend-design skill</span>
+                                </div>
+                            </div>
+                            <div class="comparison-verdict success">
+                                <p><strong>✨ 优化效果：</strong></p>
+                                <ul>
+                                    <li>星空背景更有夜晚的感觉</li>
+                                    <li>雪花会缓缓落下并逐渐消失</li>
+                                    <li>选用 Cormorant Garamond 优雅字体</li>
+                                    <li>气氛非常浪漫</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quote-block">
+                        <div class="quote-mark">"</div>
+                        <p class="quote-text">
+                            是不是高下立判？这不比初级甚至中级前端程序员强？关键这是我几分钟内做出来的。
+                        </p>
+                    </div>
+
+                    <h3 class="subsection-title">测试 2：Skill Showcases 首页</h3>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-lang">Prompt</span>
+                        </div>
+                        <pre><code>创建一个「Skill Showcases」网站首页，网站主要内容为期刊形式发表的 skill 评测，每期展示一个用例及其用到的 skill。希望有些有趣的交互增加互动感。</code></pre>
+                    </div>
+
+                    <div class="comparison-grid">
+                        <div class="comparison-item">
+                            <div class="comparison-header">
+                                <span class="comparison-label bad">Without Skill</span>
+                            </div>
+                            <div class="comparison-image">
+                                <div class="image-placeholder">
+                                    <span class="placeholder-text">普通生成效果</span>
+                                </div>
+                            </div>
+                            <div class="comparison-verdict">
+                                <ul>
+                                    <li>不出所料，主题色是 AI 最爱的紫色</li>
+                                    <li>卡片浮动的效果还行</li>
+                                    <li>光标移动时有个魔法粉末的效果，有种看大学生博客的感觉</li>
+                                    <li>整体来说很粗糙，非常生硬</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="comparison-item">
+                            <div class="comparison-header">
+                                <span class="comparison-label good">With Skill</span>
+                            </div>
+                            <div class="comparison-image">
+                                <div class="image-placeholder highlight">
+                                    <span class="placeholder-text">使用 skill 之后</span>
+                                </div>
+                            </div>
+                            <div class="comparison-verdict success">
+                                <ul>
+                                    <li>惊艳！打开的时候被震撼到了</li>
+                                    <li>细节的交互非常精致</li>
+                                    <li>光标移动到按钮上的光晕，非常高级</li>
+                                    <li>字体用的 Fraunces，高下立判</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="subsection-title">与竞品对比</h3>
+
+                    <div class="competitor-grid">
+                        <div class="competitor-card">
+                            <div class="competitor-header">
+                                <h4>Figma Make</h4>
+                                <span class="competitor-score bad">3/10</span>
+                            </div>
+                            <p>满脸问号。说实话，我本来想一个专业做设计的网站做的 AI 工具，应该能比拼一下。但没想到效果这么差，中间一坨不知道是什么玩意儿。</p>
+                        </div>
+
+                        <div class="competitor-card">
+                            <div class="competitor-header">
+                                <h4>Lovable</h4>
+                                <span class="competitor-score medium">8/10</span>
+                            </div>
+                            <p>该说不说，还是有两下子的。标题字体用的 Playfair Display，效果还行。但正文用的 Inter，是 frontend-design 中明确说明要避免使用的常见字体。整体而言确实没有 skill 出来的效果惊艳。</p>
+                        </div>
+
+                        <div class="competitor-card highlight">
+                            <div class="competitor-header">
+                                <h4>frontend-design skill</h4>
+                                <span class="competitor-score good">10/10</span>
+                            </div>
+                            <p>从这里也可以感受到 skill 的潜力。只要搭配合适的工具组合，我们完全做到一个场景下的顶尖水平，不需要去找应用，就能媲美最好甚至超越专门的 agent 应用。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Breakdown Section -->
+            <section class="content-section" id="breakdown">
+                <div class="section-marker">
+                    <span class="marker-number">04</span>
+                    <span class="marker-label">拆解</span>
+                </div>
+
+                <div class="section-body">
+                    <h3 class="subsection-title">如何实现的？</h3>
+
+                    <div class="key-concept">
+                        <div class="concept-icon">🎨</div>
+                        <div class="concept-content">
+                            <h4>关键词：美学 Aesthetic</h4>
+                            <p>沉淀了《前端美学：提示词指南》中的内容</p>
+                            <a href="https://github.com/anthropics/claude-cookbooks/blob/main/coding/prompting_for_frontend_aesthetics.ipynb" class="concept-link" target="_blank">
+                                查看完整指南 →
+                            </a>
+                        </div>
+                    </div>
+
+                    <p>
+                        可以看到，如果没有指导，Claude 通常会默认生成以白色和紫色为背景的简约设计。有了美学提示后，它会生成更多样化、更具视觉吸引力的设计。
+                    </p>
+
+                    <div class="insight-box">
+                        <h4>💭 深层思考</h4>
+                        <p>
+                            大模型虽然有渊博的知识，精通设计原则、字体排印和色彩理论等，但如果不明确要求，它的这些能力都不会得到展现，而你也只能得到中规中矩的结果。
+                        </p>
+                        <p>
+                            为什么会这样？是模型还不够智能吗？
+                        </p>
+                        <ul>
+                            <li><strong>Token 成本：</strong>模型厂商不可能无限展开用户请求中的每个关键词，这不划算也没必要。</li>
+                            <li><strong>意图校准：</strong>当用户在说「好看」「精美」时，他并不知道自己在说什么，他描述的是一种模糊的感觉。含义需要澄清，意图需要校准。</li>
+                        </ul>
+                    </div>
+
+                    <div class="philosophy-quote">
+                        <p>
+                            这也是我做这个系列的初衷——我相信用户没有必要去学习比较那么多 agent/skill。想象一下，当你看到一个案例，第一时间就看到效果，不是夸耀的宣传语，不是含义宽泛的功能介绍，就是真实的评测。
+                        </p>
+                        <p>
+                            你立马就知道，「我就想要这个类似的」，或者「哦，这个跟我要做的东西还有点差别」。<strong>你在查看 showcase 的过程，本质上也是在实行一次潜移默化的意图校准。</strong>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Usage Section -->
+            <section class="content-section" id="usage">
+                <div class="section-marker">
+                    <span class="marker-number">05</span>
+                    <span class="marker-label">如何使用</span>
+                </div>
+
+                <div class="section-body">
+                    <p class="section-intro">
+                        如果可以，请描述清楚用途、受众或技术限制等背景信息。
+                    </p>
+
+                    <div class="example-comparison">
+                        <div class="example-item bad-example">
+                            <div class="example-label">
+                                <span class="label-icon">❌</span>
+                                <span class="label-text">一般做法</span>
+                            </div>
+                            <div class="example-content">
+                                <p>帮我设计一个卖运动鞋的手机端商品卡片</p>
+                            </div>
+                        </div>
+
+                        <div class="example-arrow">→</div>
+
+                        <div class="example-item good-example">
+                            <div class="example-label">
+                                <span class="label-icon">✅</span>
+                                <span class="label-text">更好的做法</span>
+                            </div>
+                            <div class="example-content">
+                                <p>请设计一个用于'限量版球鞋抽签发售'APP 的移动端商品卡片。受众是追求潮流的 Z 世代用户，他们通常在几秒钟内做出购买决策，因此视觉重心必须是高清的大尺寸鞋子图片和倒计时组件，弱化文字描述。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="best-practice-box">
+                        <h4>🎯 最佳实践</h4>
+                        <ul>
+                            <li>清晰描述用途和目标受众</li>
+                            <li>说明技术限制（如移动端优先、性能要求等）</li>
+                            <li>指出视觉重心和优先级</li>
+                            <li>若页面较复杂，可以和 <code>webapp-testing</code> 搭配使用，确保页面布局正常，功能可用</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Limitations Section -->
+            <section class="content-section" id="limitations">
+                <div class="section-marker">
+                    <span class="marker-number">06</span>
+                    <span class="marker-label">边界与局限</span>
+                </div>
+
+                <div class="section-body">
+                    <p class="section-intro">
+                        frontend-design skill 能用来出很好看的前端页面，但它能胜任所有前端开发工作吗？
+                    </p>
+
+                    <div class="limitation-grid">
+                        <div class="limitation-card">
+                            <div class="limitation-icon good">✅</div>
+                            <h4>适用场景</h4>
+                            <ul>
+                                <li>UI 原型设计与打磨</li>
+                                <li>页面重新设计</li>
+                                <li>视觉风格探索</li>
+                                <li>快速出图和迭代</li>
+                            </ul>
+                        </div>
+
+                        <div class="limitation-card">
+                            <div class="limitation-icon bad">⚠️</div>
+                            <h4>不适用场景</h4>
+                            <ul>
+                                <li>复杂的业务逻辑</li>
+                                <li>状态管理</li>
+                                <li>后端集成</li>
+                                <li>大型应用架构</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="recommendation-box">
+                        <p>
+                            <strong>建议：</strong>主要侧重 UI 设计，建议利用它充分做好原型打磨，重新设计页面也可以，但不要让它做比较重的业务逻辑。如果你在处理状态管理或复杂的业务逻辑，可以使用拥有具体技术栈的开发经验或架构经验的 skill。
+                        </p>
+                        <p class="recommendation-note">（敬请期待后续评测）</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-background">
+            <div class="cta-orb orb-1"></div>
+            <div class="cta-orb orb-2"></div>
+        </div>
+
+        <div class="cta-content">
+            <h2 class="cta-title">准备好创建独特的界面了吗？</h2>
+            <p class="cta-description">
+                立即开始使用 frontend-design skill，让你的前端设计脱颖而出
+            </p>
+            <a href="/agent/frontend-design" class="cta-button">
+                <span class="button-text">立即使用此 Skill</span>
+                <span class="button-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                    </svg>
+                </span>
+            </a>
+            <p class="cta-note">无需复杂配置，即刻开始</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="article-footer">
+        <div class="footer-content">
+            <div class="footer-nav">
+                <a href="#" class="footer-link prev">
+                    <span class="link-label">上一篇</span>
+                    <span class="link-title">暂无更早的文章</span>
+                </a>
+                <a href="/" class="footer-link home">
+                    <span class="link-icon">◆</span>
+                    <span class="link-title">返回首页</span>
+                </a>
+                <a href="#" class="footer-link next">
+                    <span class="link-label">下一篇</span>
+                    <span class="link-title">敬请期待</span>
+                </a>
+            </div>
+
+            <div class="footer-meta">
+                <p>© 2024 Skill Showcases · 探索技能的无限可能</p>
+                <div class="footer-social">
+                    <a href="#">GitHub</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Discord</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
