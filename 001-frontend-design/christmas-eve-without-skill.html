@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>平安夜祝福 - 拆礼物</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e22ce 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* 雪花容器 */
+        .snow {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            color: white;
+            font-size: 1em;
+            animation: fall linear infinite;
+            opacity: 0.8;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+            }
+        }
+
+        /* 主容器 */
+        .container {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        /* 标题 */
+        h1 {
+            color: white;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff00de;
+            }
+            to {
+                text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff00de;
+            }
+        }
+
+        /* 礼物盒容器 */
+        .gift-container {
+            perspective: 1000px;
+            margin: 40px auto;
+            position: relative;
+        }
+
+        .gift-box {
+            width: clamp(200px, 50vw, 300px);
+            height: clamp(200px, 50vw, 300px);
+            margin: 0 auto;
+            position: relative;
+            cursor: pointer;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+        }
+
+        .gift-box:hover:not(.opened) {
+            transform: scale(1.05) rotateY(5deg);
+        }
+
+        /* 礼物盒底部 */
+        .box-bottom {
+            width: 100%;
+            height: 70%;
+            background: linear-gradient(145deg, #e74c3c, #c0392b);
+            border-radius: 10px;
+            position: absolute;
+            bottom: 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* 礼物盒盖子 */
+        .box-lid {
+            width: 100%;
+            height: 35%;
+            background: linear-gradient(145deg, #e74c3c, #c0392b);
+            border-radius: 10px;
+            position: absolute;
+            top: 0;
+            transform-origin: bottom;
+            transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+        }
+
+        /* 丝带 - 竖直 */
+        .ribbon-vertical {
+            width: 15%;
+            height: 100%;
+            background: linear-gradient(90deg, #f1c40f, #f39c12);
+            position: absolute;
+            left: 42.5%;
+            top: 0;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        /* 丝带 - 水平 */
+        .ribbon-horizontal {
+            width: 100%;
+            height: 15%;
+            background: linear-gradient(180deg, #f1c40f, #f39c12);
+            position: absolute;
+            top: 25%;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* 蝴蝶结 */
+        .bow {
+            width: 60px;
+            height: 60px;
+            background: #f1c40f;
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 50%;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .bow::before,
+        .bow::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 50px;
+            background: #f1c40f;
+            border-radius: 50% 50% 0 0;
+            top: 5px;
+        }
+
+        .bow::before {
+            left: -35px;
+            transform: rotate(-45deg);
+        }
+
+        .bow::after {
+            right: -35px;
+            transform: rotate(45deg);
+        }
+
+        /* 打开状态 */
+        .gift-box.opened .box-lid {
+            transform: rotateX(-120deg) translateY(-20px);
+        }
+
+        /* 祝福消息 */
+        .message {
+            opacity: 0;
+            transform: scale(0);
+            transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 20px;
+            margin-top: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .message.show {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .message h2 {
+            color: #e74c3c;
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            margin-bottom: 15px;
+        }
+
+        .message p {
+            color: #2c3e50;
+            font-size: clamp(1rem, 3vw, 1.2rem);
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        /* 提示文字 */
+        .hint {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+            margin-top: 20px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 0.6;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+
+        /* 重置按钮 */
+        .reset-btn {
+            display: none;
+            margin-top: 20px;
+            padding: 12px 30px;
+            background: linear-gradient(145deg, #e74c3c, #c0392b);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .reset-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .reset-btn:active {
+            transform: translateY(0);
+        }
+
+        .reset-btn.show {
+            display: inline-block;
+        }
+
+        /* 星星 */
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            animation: twinkle 3s ease-in-out infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% {
+                opacity: 0.3;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.2);
+            }
+        }
+
+        /* 粒子效果 */
+        .particle {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: #f1c40f;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 100;
+            animation: particle-burst 1s ease-out forwards;
+        }
+
+        @keyframes particle-burst {
+            0% {
+                opacity: 1;
+                transform: translate(0, 0) scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: translate(var(--tx), var(--ty)) scale(0);
+            }
+        }
+
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            .message {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                margin-bottom: 15px;
+            }
+
+            .gift-container {
+                margin: 30px auto;
+            }
+
+            .message {
+                padding: 15px;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 雪花容器 -->
+    <div class="snow" id="snow"></div>
+
+    <!-- 星星容器 -->
+    <div class="stars" id="stars"></div>
+
+    <!-- 主内容 -->
+    <div class="container">
+        <h1>🎄 平安夜快乐 🎄</h1>
+
+        <div class="gift-container" id="giftContainer">
+            <div class="gift-box" id="giftBox">
+                <div class="box-lid">
+                    <div class="bow"></div>
+                    <div class="ribbon-horizontal"></div>
+                </div>
+                <div class="ribbon-vertical"></div>
+                <div class="box-bottom"></div>
+            </div>
+        </div>
+
+        <p class="hint" id="hint">✨ 点击礼物盒拆开惊喜 ✨</p>
+
+        <div class="message" id="message">
+            <h2>🎅 圣诞祝福 🎅</h2>
+            <p>🌟 在这个温馨的平安夜，</p>
+            <p>💖 愿你被温暖包围，被幸福环绕。</p>
+            <p>🎁 愿所有美好如期而至，</p>
+            <p>⭐ 愿你的每一个愿望都能实现。</p>
+            <p>🎄 祝你平安喜乐，圣诞快乐！</p>
+        </div>
+
+        <button class="reset-btn" id="resetBtn">🔄 重新打开礼物</button>
+    </div>
+
+    <script>
+        // 元素引用
+        const giftBox = document.getElementById('giftBox');
+        const giftContainer = document.getElementById('giftContainer');
+        const message = document.getElementById('message');
+        const hint = document.getElementById('hint');
+        const resetBtn = document.getElementById('resetBtn');
+        const snow = document.getElementById('snow');
+        const stars = document.getElementById('stars');
+
+        // 创建雪花
+        function createSnowflakes() {
+            const snowflakeCount = 50;
+            for (let i = 0; i < snowflakeCount; i++) {
+                const snowflake = document.createElement('div');
+                snowflake.classList.add('snowflake');
+                snowflake.innerHTML = '❄';
+                snowflake.style.left = Math.random() * 100 + '%';
+                snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
+                snowflake.style.animationDelay = Math.random() * 5 + 's';
+                snowflake.style.fontSize = Math.random() * 10 + 10 + 'px';
+                snow.appendChild(snowflake);
+            }
+        }
+
+        // 创建星星
+        function createStars() {
+            const starCount = 20;
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                star.style.width = Math.random() * 3 + 2 + 'px';
+                star.style.height = star.style.width;
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 3 + 's';
+                stars.appendChild(star);
+            }
+        }
+
+        // 创建粒子爆炸效果
+        function createParticles() {
+            const rect = giftBox.getBoundingClientRect();
+            const centerX = rect.left + rect.width / 2;
+            const centerY = rect.top + rect.height / 2;
+            const particleCount = 30;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+
+                const angle = (Math.PI * 2 * i) / particleCount;
+                const distance = 100 + Math.random() * 50;
+                const tx = Math.cos(angle) * distance;
+                const ty = Math.sin(angle) * distance;
+
+                particle.style.setProperty('--tx', tx + 'px');
+                particle.style.setProperty('--ty', ty + 'px');
+                particle.style.left = centerX + 'px';
+                particle.style.top = centerY + 'px';
+
+                document.body.appendChild(particle);
+
+                setTimeout(() => {
+                    particle.remove();
+                }, 1000);
+            }
+        }
+
+        // 打开礼物盒
+        giftBox.addEventListener('click', function() {
+            if (!giftBox.classList.contains('opened')) {
+                giftBox.classList.add('opened');
+                hint.style.display = 'none';
+
+                // 创建粒子效果
+                setTimeout(() => {
+                    createParticles();
+                }, 300);
+
+                // 延迟显示祝福消息
+                setTimeout(() => {
+                    message.classList.add('show');
+                    resetBtn.classList.add('show');
+                }, 500);
+            }
+        });
+
+        // 重置按钮
+        resetBtn.addEventListener('click', function() {
+            giftBox.classList.remove('opened');
+            message.classList.remove('show');
+            resetBtn.classList.remove('show');
+            hint.style.display = 'block';
+        });
+
+        // 页面加载时初始化
+        window.addEventListener('DOMContentLoaded', () => {
+            createSnowflakes();
+            createStars();
+        });
+    </script>
+</body>
+</html>

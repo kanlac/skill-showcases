@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill Showcases — 技能评测期刊</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300&family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+
+        <nav class="navbar">
+            <div class="nav-logo">
+                <span class="logo-icon">◆</span>
+                <span class="logo-text">SKILL SHOWCASES</span>
+            </div>
+            <div class="nav-links">
+                <a href="#issues" class="nav-link">期刊目录</a>
+                <a href="#about" class="nav-link">关于我们</a>
+                <a href="#subscribe" class="nav-link subscribe-btn">订阅更新</a>
+            </div>
+        </nav>
+
+        <div class="hero-content">
+            <div class="hero-label">QUARTERLY JOURNAL</div>
+            <h1 class="hero-title">
+                <span class="title-line">探索</span>
+                <span class="title-line">技能的</span>
+                <span class="title-line highlight">无限可能</span>
+            </h1>
+            <p class="hero-subtitle">
+                深度评测 · 实战案例 · 创新应用<br>
+                每期一个精选 Skill，为你带来最前沿的技术洞察
+            </p>
+            <div class="hero-cta">
+                <button class="cta-button primary" onclick="scrollToIssues()">
+                    探索最新一期
+                    <span class="button-arrow">→</span>
+                </button>
+                <button class="cta-button secondary">
+                    查看往期内容
+                </button>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">24</div>
+                    <div class="stat-label">已发布期刊</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number">156</div>
+                    <div class="stat-label">评测 Skills</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number">12K+</div>
+                    <div class="stat-label">专业读者</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span class="scroll-text">向下滚动</span>
+        </div>
+    </header>
+
+    <!-- Latest Issue Feature -->
+    <section class="featured-issue">
+        <div class="section-header">
+            <span class="section-label">LATEST ISSUE · VOL.24</span>
+            <h2 class="section-title">本期聚焦</h2>
+        </div>
+
+        <div class="featured-content">
+            <div class="featured-image-container">
+                <div class="issue-badge">NEW</div>
+                <div class="featured-image">
+                    <div class="image-overlay"></div>
+                    <div class="issue-number">24</div>
+                </div>
+            </div>
+
+            <div class="featured-info">
+                <div class="issue-meta">
+                    <span class="issue-date">2024年 冬季刊</span>
+                    <span class="issue-category">AI 辅助开发</span>
+                </div>
+
+                <h3 class="featured-title">
+                    智能代码审查：<br>
+                    如何用 Code Review Skill 提升代码质量
+                </h3>
+
+                <p class="featured-description">
+                    深入探索 AI 驱动的代码审查工具，从基础概念到高级应用，我们测试了 15+ 个真实项目，
+                    总结出最佳实践方案。本期还包含独家专访和性能对比分析。
+                </p>
+
+                <div class="featured-skills">
+                    <span class="skill-tag">Code Review</span>
+                    <span class="skill-tag">Static Analysis</span>
+                    <span class="skill-tag">AI Assistant</span>
+                </div>
+
+                <div class="featured-actions">
+                    <button class="action-button read-now">
+                        立即阅读
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <button class="action-button bookmark">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M5 3H15C15.5523 3 16 3.44772 16 4V17L10 14L4 17V4C4 3.44772 4.44772 3 5 3Z" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        收藏
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Issues Grid -->
+    <section class="issues-grid" id="issues">
+        <div class="section-header">
+            <span class="section-label">ARCHIVE</span>
+            <h2 class="section-title">往期精选</h2>
+        </div>
+
+        <div class="grid-container">
+            <article class="issue-card" data-issue="23">
+                <div class="card-corner"></div>
+                <div class="card-image">
+                    <div class="card-overlay"></div>
+                    <div class="card-number">23</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-season">2024 秋季刊</span>
+                        <span class="card-category">数据可视化</span>
+                    </div>
+                    <h3 class="card-title">交互式图表生成：Chart Builder Skill 完全指南</h3>
+                    <p class="card-excerpt">从基础图表到复杂仪表盘，掌握数据可视化的艺术...</p>
+                    <div class="card-tags">
+                        <span class="mini-tag">D3.js</span>
+                        <span class="mini-tag">Echarts</span>
+                        <span class="mini-tag">Canvas</span>
+                    </div>
+                </div>
+                <div class="card-action">
+                    <span>阅读全文</span>
+                    <span class="action-arrow">→</span>
+                </div>
+            </article>
+
+            <article class="issue-card" data-issue="22">
+                <div class="card-corner"></div>
+                <div class="card-image">
+                    <div class="card-overlay"></div>
+                    <div class="card-number">22</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-season">2024 夏季刊</span>
+                        <span class="card-category">API 集成</span>
+                    </div>
+                    <h3 class="card-title">API 连接器：构建无缝集成的最佳实践</h3>
+                    <p class="card-excerpt">深度解析 REST、GraphQL 和 WebSocket 的整合方案...</p>
+                    <div class="card-tags">
+                        <span class="mini-tag">REST API</span>
+                        <span class="mini-tag">GraphQL</span>
+                        <span class="mini-tag">Auth</span>
+                    </div>
+                </div>
+                <div class="card-action">
+                    <span>阅读全文</span>
+                    <span class="action-arrow">→</span>
+                </div>
+            </article>
+
+            <article class="issue-card" data-issue="21">
+                <div class="card-corner"></div>
+                <div class="card-image">
+                    <div class="card-overlay"></div>
+                    <div class="card-number">21</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-season">2024 春季刊</span>
+                        <span class="card-category">文档生成</span>
+                    </div>
+                    <h3 class="card-title">智能文档：自动化技术文档的革命</h3>
+                    <p class="card-excerpt">如何用 AI 生成专业级的 API 文档和用户手册...</p>
+                    <div class="card-tags">
+                        <span class="mini-tag">Markdown</span>
+                        <span class="mini-tag">OpenAPI</span>
+                        <span class="mini-tag">Docs</span>
+                    </div>
+                </div>
+                <div class="card-action">
+                    <span>阅读全文</span>
+                    <span class="action-arrow">→</span>
+                </div>
+            </article>
+
+            <article class="issue-card" data-issue="20">
+                <div class="card-corner"></div>
+                <div class="card-image">
+                    <div class="card-overlay"></div>
+                    <div class="card-number">20</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-season">2024 冬季刊</span>
+                        <span class="card-category">测试自动化</span>
+                    </div>
+                    <h3 class="card-title">测试驱动开发：E2E 测试框架深度评测</h3>
+                    <p class="card-excerpt">Playwright、Cypress 和 Puppeteer 全方位对比...</p>
+                    <div class="card-tags">
+                        <span class="mini-tag">E2E</span>
+                        <span class="mini-tag">Testing</span>
+                        <span class="mini-tag">CI/CD</span>
+                    </div>
+                </div>
+                <div class="card-action">
+                    <span>阅读全文</span>
+                    <span class="action-arrow">→</span>
+                </div>
+            </article>
+
+            <article class="issue-card" data-issue="19">
+                <div class="card-corner"></div>
+                <div class="card-image">
+                    <div class="card-overlay"></div>
+                    <div class="card-number">19</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-season">2023 秋季刊</span>
+                        <span class="card-category">性能优化</span>
+                    </div>
+                    <h3 class="card-title">Web 性能监控：从指标到优化的完整路径</h3>
+                    <p class="card-excerpt">Core Web Vitals 优化实战，提升用户体验的秘密...</p>
+                    <div class="card-tags">
+                        <span class="mini-tag">Performance</span>
+                        <span class="mini-tag">Lighthouse</span>
+                        <span class="mini-tag">Metrics</span>
+                    </div>
+                </div>
+                <div class="card-action">
+                    <span>阅读全文</span>
+                    <span class="action-arrow">→</span>
+                </div>
+            </article>
+
+            <article class="issue-card" data-issue="18">
+                <div class="card-corner"></div>
+                <div class="card-image">
+                    <div class="card-overlay"></div>
+                    <div class="card-number">18</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-season">2023 夏季刊</span>
+                        <span class="card-category">设计系统</span>
+                    </div>
+                    <h3 class="card-title">组件库构建：可扩展设计系统的实践指南</h3>
+                    <p class="card-excerpt">从原子设计到完整的组件库，打造一致的用户体验...</p>
+                    <div class="card-tags">
+                        <span class="mini-tag">Design System</span>
+                        <span class="mini-tag">Storybook</span>
+                        <span class="mini-tag">Tokens</span>
+                    </div>
+                </div>
+                <div class="card-action">
+                    <span>阅读全文</span>
+                    <span class="action-arrow">→</span>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter" id="subscribe">
+        <div class="newsletter-content">
+            <div class="newsletter-visual">
+                <div class="visual-circle"></div>
+                <div class="visual-text">
+                    <span class="visual-large">订阅</span>
+                    <span class="visual-small">SUBSCRIBE</span>
+                </div>
+            </div>
+
+            <div class="newsletter-info">
+                <h2 class="newsletter-title">不要错过任何精彩内容</h2>
+                <p class="newsletter-description">
+                    每季度收到最新期刊，以及独家的技术洞察和专家访谈。
+                    加入 12,000+ 专业开发者的订阅社区。
+                </p>
+
+                <form class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="输入你的邮箱地址" required>
+                    <button type="submit" class="newsletter-submit">
+                        <span>订阅</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </form>
+
+                <p class="newsletter-privacy">
+                    我们尊重你的隐私。随时可以取消订阅。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-icon">◆</span>
+                        <span class="logo-text">SKILL SHOWCASES</span>
+                    </div>
+                    <p class="footer-tagline">探索技能的无限可能</p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-heading">期刊</h4>
+                        <a href="#" class="footer-link">最新一期</a>
+                        <a href="#" class="footer-link">往期目录</a>
+                        <a href="#" class="footer-link">主题分类</a>
+                        <a href="#" class="footer-link">作者团队</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 class="footer-heading">资源</h4>
+                        <a href="#" class="footer-link">Skill 库</a>
+                        <a href="#" class="footer-link">使用指南</a>
+                        <a href="#" class="footer-link">API 文档</a>
+                        <a href="#" class="footer-link">社区论坛</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 class="footer-heading">关于</h4>
+                        <a href="#" class="footer-link">关于我们</a>
+                        <a href="#" class="footer-link">联系方式</a>
+                        <a href="#" class="footer-link">投稿指南</a>
+                        <a href="#" class="footer-link">隐私政策</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2024 Skill Showcases. 保留所有权利。</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link">GitHub</a>
+                    <a href="#" class="social-link">Twitter</a>
+                    <a href="#" class="social-link">Discord</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
