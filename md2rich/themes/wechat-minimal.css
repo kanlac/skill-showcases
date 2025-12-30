@@ -335,33 +335,6 @@ del {
   opacity: 0.6;
 }
 
-/* === 脚注 - 精致标记 === */
-.footnote-ref {
-  color: var(--accent-color);
-  font-size: 14px;
-  font-weight: 500;
-  vertical-align: super;
-  text-decoration: none;
-  padding: 0 2px;
-}
-
-.footnotes {
-  margin-top: 80px;
-  padding-top: 32px;
-  border-top: 1px solid var(--border-light);
-  font-size: 16px;
-  color: var(--text-light);
-}
-
-.footnotes ol {
-  padding-left: 28px;
-}
-
-.footnotes li {
-  margin: 16px 0;
-  line-height: 1.7;
-}
-
 /* === 代码块包装器 === */
 .code-wrapper {
   margin: 40px 0;

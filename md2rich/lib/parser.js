@@ -1,23 +1,10 @@
 import { marked } from 'marked';
-import { markedHighlight } from 'marked-highlight';
-import hljs from 'highlight.js';
 
 /**
  * 配置 Markdown 解析器
- * 支持代码高亮、表格、脚注等扩展功能
+ * 支持表格等扩展功能
  */
 function configureMarked() {
-  // 配置代码高亮
-  marked.use(
-    markedHighlight({
-      langPrefix: 'hljs language-',
-      highlight(code, lang) {
-        const language = hljs.getLanguage(lang) ? lang : 'plaintext';
-        return hljs.highlight(code, { language }).value;
-      }
-    })
-  );
-
   // 配置 marked 选项
   marked.setOptions({
     gfm: true,          // 启用 GitHub Flavored Markdown

@@ -195,27 +195,3 @@ del {
   text-decoration: line-through;
   color: #95a5a6;
 }
-
-/* 脚注 */
-.footnote-ref {
-  color: #3498db;
-  font-size: 14px;
-  vertical-align: super;
-  text-decoration: none;
-}
-
-.footnotes {
-  margin-top: 40px;
-  padding-top: 20px;
-  border-top: 1px solid #e0e0e0;
-  font-size: 14px;
-  color: #666;
-}
-
-.footnotes ol {
-  padding-left: 20px;
-}
-
-.footnotes li {
-  margin: 10px 0;
-}

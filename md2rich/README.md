@@ -6,8 +6,8 @@ Markdown 转富文本 HTML 工具，支持多主题，专为微信公众号等�
 
 - ✨ **多主题支持**：内置多个精美主题，可自由切换
 - 🎨 **样式内联**：自动将 CSS 转换为内联样式，完美兼容微信公众号
-- 💻 **代码高亮**：支持多种编程语言的语法高亮
-- 📊 **扩展语法**：支持表格、脚注等 GitHub Flavored Markdown 特性
+- 💻 **代码块**：优雅的代码展示样式
+- 📊 **扩展语法**：支持表格等 GitHub Flavored Markdown 特性
 - 🖼️ **图片支持**：完整支持 SVG 矢量图、PNG、JPG 等所有图片格式
 - 🚀 **简单易用**：命令行工具，一行命令完成转换
 
@@ -113,7 +113,6 @@ node index.js input.md -t my-theme -c
 ## 技术栈
 
 - [marked](https://marked.js.org/) - Markdown 解析器
-- [highlight.js](https://highlightjs.org/) - 代码语法高亮
 - [juice](https://github.com/Automattic/juice) - CSS 内联转换
 - [commander](https://github.com/tj/commander.js) - 命令行工具
 - [chalk](https://github.com/chalk/chalk) - 终端样式
@@ -122,7 +121,7 @@ node index.js input.md -t my-theme -c
 
 `examples/demo.md` 展示了所有支持的 Markdown 特性：
 - 标题、段落、列表
-- 代码高亮（JavaScript、Python）
+- 代码块
 - 表格
 - 引用
 - 图片（包括 SVG 矢量图）

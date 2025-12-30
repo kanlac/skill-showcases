@@ -212,32 +212,3 @@ del {
   text-decoration: line-through;
   color: #999;
 }
-
-/* 脚注 */
-.footnote-ref {
-  color: #8b7355;
-  font-size: 13px;
-  vertical-align: super;
-  text-decoration: none;
-  padding: 0 2px;
-}
-
-.footnotes {
-  margin-top: 50px;
-  padding-top: 25px;
-  border-top: 1px solid #e8e3db;
-  font-size: 14px;
-  color: #666;
-}
-
-.footnotes ol {
-  padding-left: 25px;
-}
-
-.footnotes li {
-  margin: 12px 0;
-}
-
-.footnotes p {
-  text-indent: 0;
-}
