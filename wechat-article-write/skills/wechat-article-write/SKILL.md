@@ -133,7 +133,6 @@ description: Write engaging WeChat post (公众号) articles from raw materials/
 **用具象比喻解释抽象概念**：
 - ❌ "这个设计很有 AI 的感觉"
 - ✅ "这个设计有股子浓浓的'AI 味儿'"
-- "Token" → "AI的注意力单位" 或直接换算成"汉字数"
 - "它就像一个超级懂事的实习生"
 
 **其他有效比喻**：

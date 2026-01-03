@@ -1,3 +1,7 @@
+如何问好：
+- 这是第二篇
+- 这次要剖析的 skill 仍然是来自 Anthropic 官方的
+- 后面也会介绍怎么在 Codex 中使用 Skill
 
 介绍 xlsx skill：
 - 公式驱动；约定用 pandas 库做数据处理，openpyxl 用于公式/格式化，LibreOffice 用于计算公式
@@ -21,8 +25,15 @@
 关于 skill 专用化的感悟：
 - 你可能用不到华尔街投行的财务报表规范，或许你有一套自己的规范……所以即便封装为标准化资产，skill 也是有很大操作空间的
 
+OpenAI 对 Agent Skills 的支持如何了：
+- 好消息：Codex 已经完全支持了
+- 不过不包括云端的 Codex
+- 也不包括 ChatGPT 网页端
+
 如何给 codex 安装 skill：
-- 使用 skill-creator skill，把你想安装的 skill 的 github 链接即可，它会自动帮你下载，比如 `/skill-creator https://github.com/anthropics/skills/blob/main/skills/xlsx/SKILL.md`
+- OpenAI 在 Codex 中封装了一个 skill-creator skill，用于帮你安装 Skill
+- 可惜的是默认它只能安装 OpenAI 自己仓库中的 Skill，数量非常有限，截止当前只有 6 个精选 Skill，其中 4 个还是 claude 之前就有的 notion skill
+- 不过好在只要提供你想安装的 skill 的 github 链接，它也会自动帮你下载，比如这样 `/skill-creator https://github.com/anthropics/skills/blob/main/skills/xlsx/SKILL.md` (img)
 
 使用场景：
 - 完美契合：财务报表分析与建模，需要自动化处理且已安装 LibreOffice
@@ -36,3 +47,10 @@ WPS 的 ai 插件，从单元格唤起，却要我复制，这不搞笑么。
 ![wps-ai](img/wps-ai.jpg)
 
 但 WPS, Excel 这种至少本身有庞大的用户量，推出的 AI 插件倒还有人用。formula bot 这种纯对话式 agent，相对于 claude code 没有优势。
+
+顺便解答疑惑，为什么不用 subagent？能不能用 subagent 完成？
+1）自动加载，你不需要跟 AI 说明把任务交给某个 subagent，它会自动在你处理表格任务时启用相关 skill；2）包含计算公式的脚本，而且无需加载进模型上下文。
+
+什么时候你可能可以做一个处理表格的 subagent？——想要多 agent 协作，想要给某个任务单独的上下文窗口，想要并行处理。
+
+关于如何更好地了解、使用 skill，我得到的启发：回过头来看，我为了写这篇文章而仔细研究了这个 skill 后，才终于理解它的适用场景和局限，知道了在一些小任务上它并没有派上用场，也算是解答了自己的疑惑。
