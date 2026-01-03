@@ -1,11 +1,11 @@
 
 # 任务
 
-使用 polish-wechat-draft skill，写一篇微信公众号，输出到 002-xlsx/wechat-draft.md
+使用 wechat-article-write skill，写一篇微信公众号，输出到 002-xlsx/wechat-draft.md
 
 # 写作素材
 
-002-xlsx/materials
+002-xlsx/materials/
 
 # 主题
 
