@@ -1,0 +1,8 @@
+{
+  "name": "wechat-article-write",
+  "version": "1.1.0",
+  "description": "WeChat article writing skill, specifically for 公众号",
+  "author": {
+    "name": "Kan"
+  }
+}
