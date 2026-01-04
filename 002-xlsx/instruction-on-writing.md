@@ -1,6 +1,6 @@
 # 任务
 
-使用 wechat-article-write skill，写一篇微信公众号，输出到 002-xlsx/wechat-draft.md
+使用 wechat-article-write skill，写一篇微信公众号，输出到 002-xlsx/outputs/wechat-draft-3.md
 
 # 背景
 
@@ -17,6 +17,10 @@
 # 目的
 
 向读者介绍 claude 官方的 xlsx skill。
+
+# 要求
+
+- 如果素材给出了 prompt 示例，要在输出中包含，用代码块包起来
 
 # think level
 
