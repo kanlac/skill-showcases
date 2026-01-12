@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="A cute puppy illustration">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#fff7d6"/>
+      <stop offset="55%" stop-color="#ffe3a6"/>
+      <stop offset="100%" stop-color="#ffd18a"/>
+    </radialGradient>
+    <linearGradient id="fur" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f7d9b3"/>
+      <stop offset="100%" stop-color="#e9bd86"/>
+    </linearGradient>
+    <linearGradient id="furDark" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e2ab6e"/>
+      <stop offset="100%" stop-color="#c9854b"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6" result="blur"/>
+      <feOffset dx="0" dy="5" result="off"/>
+      <feColorMatrix in="off" type="matrix"
+        values="0 0 0 0 0
+                0 0 0 0 0
+                0 0 0 0 0
+                0 0 0 0.25 0" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="shine" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.2" result="b"/>
+      <feColorMatrix in="b" type="matrix"
+        values="1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 0.75 0" result="s"/>
+      <feMerge>
+        <feMergeNode in="s"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" fill="url(#bg)"/>
+  <circle cx="256" cy="256" r="220" fill="rgba(255,255,255,0.35)"/>
+
+  <!-- Ground shadow -->
+  <ellipse cx="256" cy="392" rx="150" ry="28" fill="rgba(0,0,0,0.12)"/>
+
+  <!-- Puppy -->
+  <g filter="url(#softShadow)">
+    <!-- Tail -->
+    <path d="M373 330c35 10 55 34 52 56-4 25-32 35-58 18"
+          fill="none" stroke="url(#furDark)" stroke-width="18" stroke-linecap="round"/>
+    <path d="M373 330c18 6 30 18 29 31-1 14-17 19-31 11"
+          fill="none" stroke="#f2c998" stroke-width="8" stroke-linecap="round" opacity="0.9"/>
+
+    <!-- Body -->
+    <ellipse cx="268" cy="344" rx="135" ry="100" fill="url(#fur)"/>
+    <ellipse cx="318" cy="362" rx="70" ry="48" fill="#f1c99a" opacity="0.9"/>
+    <path d="M176 346c25 18 58 30 92 34 44 5 84-4 120-26"
+          fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="12" stroke-linecap="round"/>
+
+    <!-- Legs -->
+    <g>
+      <rect x="170" y="372" width="56" height="88" rx="26" fill="url(#furDark)"/>
+      <rect x="226" y="388" width="58" height="92" rx="26" fill="url(#furDark)"/>
+      <rect x="286" y="388" width="58" height="92" rx="26" fill="url(#furDark)"/>
+      <rect x="340" y="372" width="56" height="88" rx="26" fill="url(#furDark)"/>
+
+      <path d="M176 446h44" stroke="rgba(0,0,0,0.18)" stroke-width="8" stroke-linecap="round"/>
+      <path d="M234 464h40" stroke="rgba(0,0,0,0.18)" stroke-width="8" stroke-linecap="round"/>
+      <path d="M294 464h40" stroke="rgba(0,0,0,0.18)" stroke-width="8" stroke-linecap="round"/>
+      <path d="M346 446h44" stroke="rgba(0,0,0,0.18)" stroke-width="8" stroke-linecap="round"/>
+    </g>
+
+    <!-- Head -->
+    <g>
+      <ellipse cx="212" cy="250" rx="118" ry="110" fill="url(#fur)"/>
+      <!-- Ears -->
+      <path d="M118 214c-18-44 6-90 54-98 24-4 42 6 52 24-14 10-28 22-38 38-18 30-30 52-68 36z"
+            fill="url(#furDark)"/>
+      <path d="M306 214c18-44-6-90-54-98-24-4-42 6-52 24 14 10 28 22 38 38 18 30 30 52 68 36z"
+            fill="url(#furDark)"/>
+
+      <!-- Face patch -->
+      <path d="M160 220c-26 22-34 54-20 82 18 38 66 52 104 26 29-19 40-52 28-84-10-28-37-44-67-44-18 0-33 6-45 20z"
+            fill="#f4d3ad" opacity="0.95"/>
+
+      <!-- Eyes -->
+      <g filter="url(#shine)">
+        <ellipse cx="180" cy="255" rx="16" ry="22" fill="#2b1c14"/>
+        <ellipse cx="244" cy="255" rx="16" ry="22" fill="#2b1c14"/>
+        <circle cx="174" cy="248" r="5" fill="#ffffff" opacity="0.95"/>
+        <circle cx="238" cy="248" r="5" fill="#ffffff" opacity="0.95"/>
+      </g>
+
+      <!-- Eyebrows -->
+      <path d="M160 230c10-10 22-14 38-10" fill="none" stroke="rgba(43,28,20,0.35)" stroke-width="8" stroke-linecap="round"/>
+      <path d="M264 230c-10-10-22-14-38-10" fill="none" stroke="rgba(43,28,20,0.35)" stroke-width="8" stroke-linecap="round"/>
+
+      <!-- Nose + mouth -->
+      <path d="M214 290c0 16-16 28-34 28s-34-12-34-28 16-24 34-24 34 8 34 24z"
+            fill="#3b241a"/>
+      <path d="M180 314c0 18 16 30 32 30 16 0 32-12 32-30"
+            fill="none" stroke="rgba(59,36,26,0.75)" stroke-width="8" stroke-linecap="round"/>
+      <path d="M212 332c8 6 16 10 24 12-4 16-18 28-34 28-16 0-30-12-34-28 16-4 30-10 44-12z"
+            fill="#ff6b7a" opacity="0.95"/>
+
+      <!-- Cheeks -->
+      <circle cx="152" cy="292" r="16" fill="#ff9fb0" opacity="0.35"/>
+      <circle cx="268" cy="292" r="16" fill="#ff9fb0" opacity="0.35"/>
+    </g>
+  </g>
+
+  <!-- Subtle vignette -->
+  <radialGradient id="vig" cx="50%" cy="50%" r="65%">
+    <stop offset="60%" stop-color="rgba(0,0,0,0)"/>
+    <stop offset="100%" stop-color="rgba(0,0,0,0.12)"/>
+  </radialGradient>
+  <rect width="512" height="512" fill="url(#vig)"/>
+</svg>

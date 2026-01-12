@@ -1,0 +1,37 @@
+{
+  "status_code": 200,
+  "request_id": "28f97b78-c8fe-4a2f-bd25-593b71d046c6",
+  "code": "",
+  "message": "",
+  "output": {
+    "text": null,
+    "finish_reason": null,
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": [
+            {
+              "image": "https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/9a/20260108/d23adf3d/28f97b78-c8fe-4a2f-bd25-593b71d046c62397864339.png?Expires=1768470867&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=sqYomuz46MOfcuOFFR%2FZmhQtt%2Bc%3D"
+            }
+          ]
+        }
+      }
+    ],
+    "audio": null,
+    "task_metric": {
+      "FAILED": 0,
+      "SUCCEEDED": 1,
+      "TOTAL": 1
+    }
+  },
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "characters": 0,
+    "height": 928,
+    "image_count": 1,
+    "width": 1664
+  }
+}
