@@ -60,9 +60,14 @@ Each article follows this structure (e.g., `001-frontend-design`, `002-xlsx`):
 - `xxx-H5-小程序组件设计/` - Work-in-progress H5/mini-program component design
 - `.venv/` - Python virtual environment
 
-## Key Writing Principles 
+## Key Writing Principles
 
-refer the wechat-write skill.
+Refer to the wechat-article-write skill for comprehensive writing guidelines.
+
+**Terminology**:
+- Use "Agent" or "Coding Agent" instead of "AI" when referring to AI assistants
+- "Agent" - general term for AI coding assistants
+- "Coding Agent" - when emphasizing the coding/development context
 
 ## Python Environment
 

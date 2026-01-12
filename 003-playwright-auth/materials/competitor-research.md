@@ -20,7 +20,7 @@ Playwright Auth Manager 填补了这个空白。
 - ❌ 只能复制 Cookie，拿不到 localStorage
 - ❌ 格式容易出错（domain、path、expires 等）
 - ❌ 每次过期都要重新复制
-- ❌ AI 不知道怎么用这些 Cookie
+- ❌ Agent 不知道怎么用这些 Cookie
 
 **适用场景**：临时测试一两次
 
@@ -47,7 +47,7 @@ with sync_playwright() as p:
 - ❌ 需要学习 Playwright API
 - ❌ 每个项目都要重新写
 - ❌ 没有标准化流程
-- ❌ 不与 AI Agent 集成
+- ❌ 不与 Coding Agent 集成
 
 **适用场景**：有编程能力，需要定制化
 
@@ -65,7 +65,7 @@ with sync_playwright() as p:
 - ❌ 无法与 MCP 集成
 - ❌ 不支持 localStorage
 - ❌ 需要手动导入导出
-- ❌ AI Agent 无法直接使用
+- ❌ Coding Agent 无法直接使用
 
 **适用场景**：非开发人员的临时导出
 
@@ -96,7 +96,7 @@ const context = await browser.newContext({ storageState: 'state.json' })
 
 ### 对比表格
 
-| 方案 | 易用性 | AI 集成 | 多账号支持 | 完整性 | 安全提示 |
+| 方案 | 易用性 | Agent 集成 | 多账号支持 | 完整性 | 安全提示 |
 |------|--------|---------|------------|--------|----------|
 | 手动复制 Cookie | ⭐⭐ | ❌ | ❌ | ⭐⭐ | ❌ |
 | 手写脚本 | ⭐⭐ | ⭐⭐ | ⭐⭐ | ⭐⭐⭐⭐ | ❌ |
@@ -116,7 +116,7 @@ const context = await browser.newContext({ storageState: 'state.json' })
 都可以：
 1. 运行一个命令
 2. 手动登录一次
-3. AI 自动配置好一切
+3. Agent 自动配置好一切
 
 **不需要学习 API，不需要写代码，不需要操心安全问题。**
 

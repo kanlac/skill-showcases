@@ -2,9 +2,9 @@
 
 ## 技术架构
 
-Playwright Auth Manager 基于 Playwright MCP（Model Context Protocol），通过保存和复用浏览器认证状态，让 AI Agent 能够像真人一样访问需要登录的网站。
+Playwright Auth Manager 基于 Playwright MCP（Model Context Protocol），通过保存和复用浏览器认证状态，让 Coding Agent 能够像真人一样访问需要登录的网站。
 
-核心流程：用户手动登录一次 → 脚本保存认证信息到 JSON 文件 → MCP Server 加载认证状态 → AI Agent 直接使用已登录状态。
+核心流程：用户手动登录一次 → 脚本保存认证信息到 JSON 文件 → MCP Server 加载认证状态 → Coding Agent 直接使用已登录状态。
 
 ## 两个核心脚本
 
@@ -62,7 +62,7 @@ Playwright Auth Manager 基于 Playwright MCP（Model Context Protocol），通�
 }
 ```
 
-重启 MCP 客户端后，AI Agent 就能使用保存的登录状态了。
+重启 MCP 客户端后，Coding Agent 就能使用保存的登录状态了。
 
 ## 安全设计
 
