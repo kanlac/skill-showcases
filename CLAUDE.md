@@ -7,8 +7,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 This is the writing repository for Skill 2049 (技能2049), a WeChat public account focused on evaluating and showcasing Agent Skills. The goal is to automate the writing workflow as much as possible, while maintaining the author's aesthetic control in the final review.
 
 Published articles:
-- 001-frontend-design/wechat-article-final.md
-- 002-xlsx/writing/wechat-article-final.md
+- 001-frontend-design/README.md
+- 002-xlsx/README.md
 
 ## Article Production Workflow (SOP)
 
@@ -36,6 +36,7 @@ Each article follows this structure (e.g., `001-frontend-design`, `002-xlsx`):
 {number}-{topic-name}/
 ├── materials/           # Research materials and skill analysis
 │   ├── skill-analysis.md
+│   ├── outline.md
 │   ├── why.md
 │   └── thoughts.md
 ├── raw-usecases/       # Generated use case examples (may include Python scripts)
@@ -44,11 +45,9 @@ Each article follows this structure (e.g., `001-frontend-design`, `002-xlsx`):
 │   │   └── prompts.md  # Iterated prompts and testing notes
 ├── outputs/            # Draft outputs
 │   └── wechat-draft-*.md
-├── writing/            # Final article
-│   └── wechat-article-final.md
-├── img/                # Images for the article (001 only)
-├── instruction-on-writing.md  # Writing instructions (002 only)
-└── README.md           # Article-specific overview
+├── img/                # Images for the article
+├── instruction-on-writing.md  # Writing instructions (optional)
+└── README.md           # Final published article
 ```
 
 ### Other Directories
@@ -95,12 +94,12 @@ Common use cases include:
 ### Creating a New Article
 
 1. Create directory: `{number}-{topic-name}/`
-2. Set up subdirectories: `materials/`, `raw-usecases/`, `arena/`, `outputs/`, `writing/`
-3. Research and populate `materials/` with skill analysis
+2. Set up subdirectories: `materials/`, `raw-usecases/`, `arena/`, `outputs/`, `img/`
+3. Research and populate `materials/` with skill analysis and outline
 4. Generate and test use cases in `arena/`
 5. Document prompts in `arena/case-name/prompts.md`
 6. Use the wechat-article-write skill to create drafts in `outputs/`
-7. Finalize in `writing/wechat-article-final.md`
+7. Finalize in `README.md` (the final published article)
 
 ### Writing Process
 
