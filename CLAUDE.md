@@ -24,7 +24,7 @@ Each article follows a structured creation process documented in the README:
    - Collect token usage and results
    - Store prompts in `arena/case-name/prompts.md`
 6. **丰富 materials** - Enrich materials with findings
-7. **write** - Write the final article using the wechat-article-write skill
+7. **write** - Write the final article using the wechat-write skill
 
 ## Directory Structure
 
@@ -52,8 +52,6 @@ Each article follows this structure (e.g., `001-frontend-design`, `002-xlsx`):
 
 ### Other Directories
 
-- `wechat-article-write/` - Custom Claude Code plugin for writing WeChat articles
-  - Contains the `wechat-article-write` skill with comprehensive writing guidelines
 - `skill-showcases-website-case/` - Example website cases (home page, case pages)
 - `movie-seat-selector/` - Example web application
 - `xxx-canvas-design/` - Work-in-progress canvas design article materials
@@ -62,7 +60,7 @@ Each article follows this structure (e.g., `001-frontend-design`, `002-xlsx`):
 
 ## Key Writing Principles
 
-Refer to the wechat-article-write skill for comprehensive writing guidelines.
+Refer to the wechat-write skill for comprehensive writing guidelines.
 
 **Terminology**:
 - Use "Agent" or "Coding Agent" instead of "AI" when referring to AI assistants
@@ -103,7 +101,7 @@ Common use cases include:
 3. Research and populate `materials/` with skill analysis and outline
 4. Generate and test use cases in `arena/`
 5. Document prompts in `arena/case-name/prompts.md`
-6. Use the wechat-article-write skill to create drafts in `outputs/`
+6. Use the wechat-write skill to create drafts in `outputs/`
 7. Finalize in `README.md` (the final published article)
 
 ### Writing Process
@@ -112,7 +110,7 @@ When asked to write an article, refer to:
 1. The SOP workflow in README.md
 2. The materials gathered in `materials/`
 3. The tested prompts in `arena/*/prompts.md`
-4. The wechat-article-write skill guidelines
+4. The wechat-write skill guidelines
 
 ## Important Context
 

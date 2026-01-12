@@ -10,8 +10,3 @@
 - 丰富 materials
 - write
 
-## 测试公众号写作 skill
-
-```
-claude --plugin-dir ./wechat-article-write
-```

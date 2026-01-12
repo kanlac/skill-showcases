@@ -1,6 +1,6 @@
 # 任务
 
-使用 wechat-article-write skill，写一篇微信公众号，输出到 002-xlsx/outputs/wechat-draft-3.md
+使用 wechat-write skill，写一篇微信公众号，输出到 002-xlsx/outputs/wechat-draft-3.md
 
 # 背景
 
